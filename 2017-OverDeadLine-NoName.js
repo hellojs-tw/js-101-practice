@@ -1,3 +1,4 @@
+//大名
 function getBMI(height,weight) {
     return weight/(Math.pow(height/100,2))
     
