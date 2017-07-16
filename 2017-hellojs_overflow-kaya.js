@@ -1,4 +1,6 @@
-var getBMI = function(weight, height){
+// 莊于萱
+
+var getBMI = function (weight, height) {
 	return weight / (height*2); 
 }
 getBMI(50, 1.66);
