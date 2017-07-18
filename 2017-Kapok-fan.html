@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Hellojs Week2 Vue</title>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</head>
+
+<body translate="no" >
+
+  
+<div id="app">
+  <label><span>height(m):</span>
+    <input type="text" v-model="h"/>
+  </label><br/>
+  <label><span>weight(kg):</span>
+    <input type="text" v-model="w"/>
+  </label><br/>
+  <h3>BMI: {{ BMI }}</h3>
+  <h3>您的體重在: {{ getMsg }}</h3>
+</div>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+
+    <script>
+    var vm = new Vue({
+  el:'#app',
+  data:{
+    w: '',
+    h: ''
+  },
+  mounted(){
+    
+  },
+  computed:{
+    BMI(){
+      return (this.w == '' || this.h == '')? 'Please enter your height & weight' :this.w/this.h/this.h;
+    },
+    getMsg(){
+      if(this.w == '' || this.h == ''){
+    return('Please enter your height & weight');
+  }
+   if(this.BMI < 18.5){
+    return('體重過輕');
+  }else if(this.BMI < 24){
+    return('正常範圍');
+  }else if(this.BMI < 27){
+    return('過重');
+  }else if(this.BMI < 30){
+    return('輕度肥胖');
+  }else if(this.BMI < 35){
+    return('中度肥胖');
+  }else{
+    return('過度肥胖');
+  }
+    }
+  }
+})
+  </script>
+
+  
+  
+
+</body>
+</html>
+ 
