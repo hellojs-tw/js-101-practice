@@ -1,8 +1,8 @@
 /**
  * 
- * @authors Your Name (you@example.org)
+ * @authors 賴麒任 (Locifer)
  * @date    2017-07-13 16:33:47
- * @version $Id$
+ * @version $0.00$
  */
 
 function getBMI(hei, wei) {
