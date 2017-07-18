@@ -1,3 +1,4 @@
+//紀晧祥
 function getbmi(height,weight){
 height = height / 100;
  var bmi = weight / (height * height);
