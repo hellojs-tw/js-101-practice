@@ -1,0 +1,23 @@
+var readline = require('readline');
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+rl.question('Enter your height(kg) : ', function (x) {
+    rl.question('Enter your weight(m) : ', function (y) {
+        var sum = parseFloat(x) + parseFloat(y);
+
+        getBMI(parseFloat(y), parseFloat(x),getMessage);
+
+        rl.close();
+    });
+});
+function getBMI(height, weight, callback){
+    var BMI = weight/(height*height);
+    callback(BMI);
+    console.log("Hello after getMessage");
+}
+function getMessage(bmi) {
+    console.log(bmi);
+}
