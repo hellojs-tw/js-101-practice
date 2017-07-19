@@ -8,15 +8,31 @@ var rl = readline.createInterface({
     output: process.stdout
 });
 
-function getMessage(number){
-    console.log('the BMI is ',number);
+function getMessage(height,weight){
+    var BMI = parseFloat(weight)/(parseFloat(height)*parseFloat(height));
+    if(BMI < 18.5 )
+	console.log("體重過輕");
+    else if( 18.5<= BMI < 24)
+	console.log("正常範圍");
+    else if( 24 <= BMI < 27)
+	console.log("過重");
+    else if( 27<= BMI < 30)
+	console.log("輕度肥胖");
+    else if( 30<= BMI < 35)
+	console.log("中度肥胖");
+    else
+	console.log("重度肥胖");
+}
+
+function getBMI(height,weight){
+    var BMI = parseFloat(weight)/(parseFloat(height)*parseFloat(height));
+    console.log("my BMI is ",BMI);
 }
 
 rl.question('Enter height: ',function(height){
     rl.question('Enter weight: ',function(weight){
-        var BMI = parseFloat(weight)/(parseFloat(height)*parseFloat(height));
-        getMessage(BMI)
-
+        getBMI(height,weight)
+	getMessage(height,weight)
         rl.close;
     });
 });
