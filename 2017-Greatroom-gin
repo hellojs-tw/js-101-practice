@@ -1,0 +1,22 @@
+//黃競霆
+
+
+var readline = require('readline');
+
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+function getMessage(number){
+    console.log('the BMI is ',number);
+}
+
+rl.question('Enter height: ',function(height){
+    rl.question('Enter weight: ',function(weight){
+        var BMI = parseFloat(weight)/(parseFloat(height)*parseFloat(height));
+        getMessage(BMI)
+
+        rl.close;
+    });
+});
