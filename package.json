@@ -1,0 +1,20 @@
+{
+  "name": "js-101-practice",
+  "version": "1.0.0",
+  "description": "[BMI 計算機](http://depart.femh.org.tw/dietary/3OPD/BMI.htm)",
+  "main": "2017-deadlineclub-s0461117.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s0461117/js-101-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s0461117/js-101-practice/issues"
+  },
+  "homepage": "https://github.com/s0461117/js-101-practice#readme"
+}
