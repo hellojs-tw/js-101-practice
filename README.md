@@ -11,3 +11,7 @@
 2. 完成後將你的資料 PR 回這個 repo。
 3. 檔名命名為 `{年度}-{組別名稱}-{slackId}`
 4. 例如：`2017-dateline-xxxx`
+
+## Start the program
+Clone and enter the project then execute:  
+`npm start`
